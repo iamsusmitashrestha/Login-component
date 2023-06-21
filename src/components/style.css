@@ -10,7 +10,7 @@
 
 input {
   display: block;
-  width: 40%;
+  width: 20%;
   margin: 0 auto;
   margin-bottom: 18px;
   border: 1px solid grey;
@@ -31,4 +31,5 @@ button {
   border: none;
   background-color: teal;
   color: white;
+  cursor: pointer;
 }
