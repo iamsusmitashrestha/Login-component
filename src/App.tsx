@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
-import LoginForm from "./components/LoginForm";
+import Router from "./Router";
+import { fetchProducts } from "./services/product";
 
 function App() {
   return (
     <div className="App">
-      <LoginForm />
+      <Router />
     </div>
   );
 }

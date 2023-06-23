@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import "./style.scss";
+import "./login.style.scss";
+import { Link } from "react-router-dom";
 
-function LoginForm() {
-  const [username, setUsername] = useState("");
+function Login() {
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
 
-  const onUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setUsername(event.target.value);
+  const onNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setName(event.target.value);
   };
 
   const onPasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -14,19 +15,20 @@ function LoginForm() {
   };
 
   function onLogin() {
-    console.log(`Username: ${username}`);
+    console.log(`Name: ${name}`);
     console.log(`Password: ${password}`);
   }
 
   return (
     <div className="container">
       <label>Username:</label>
-      <input type="text" value={username} onChange={onUsernameChange} />
+      <input type="text" value={name} onChange={onNameChange} />
       <label>Password:</label>
       <input type="password" value={password} onChange={onPasswordChange} />
       <button onClick={onLogin}>Login</button>
+      <Link to="/">Goto SignUp</Link>
     </div>
   );
 }
 
-export default LoginForm;
+export default Login;
