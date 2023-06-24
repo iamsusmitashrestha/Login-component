@@ -1,29 +1,16 @@
-import React, { useState } from "react";
 import "./style.scss";
+import InputField from "./common/Input";
 
 function LoginForm() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-
-  const onUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setUsername(event.target.value);
-  };
-
-  const onPasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(event.target.value);
-  };
-
   function onLogin() {
-    console.log(`Username: ${username}`);
-    console.log(`Password: ${password}`);
+    console.log(`Username: `);
+    console.log(`Password: `);
   }
 
   return (
     <div className="container">
-      <label>Username:</label>
-      <input type="text" value={username} onChange={onUsernameChange} />
-      <label>Password:</label>
-      <input type="password" value={password} onChange={onPasswordChange} />
+      <InputField label="Username" />
+      <InputField type="password" label="Password" />
       <button onClick={onLogin}>Login</button>
     </div>
   );
