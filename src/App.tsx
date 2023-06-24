@@ -2,12 +2,7 @@ import "./App.css";
 import Router from "./Router";
 
 function App() {
-  return (
-    // <Provider store={store}>
-    //   <CounterToolkit />
-    // </Provider>
-    <Router />
-  );
+  return <Router />;
 }
 
 export default App;

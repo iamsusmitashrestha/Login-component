@@ -1,4 +1,3 @@
-import { type } from "os";
 import React, { useState } from "react";
 
 interface Input {
@@ -13,10 +12,6 @@ function InputField(props: Input) {
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInput(event.target.value);
   };
-
-  function onclick() {
-    console.log(input);
-  }
 
   return (
     <div>
